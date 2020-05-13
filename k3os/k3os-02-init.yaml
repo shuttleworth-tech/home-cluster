@@ -25,6 +25,8 @@ k3os:
     - 1.us.pool.ntp.org
   k3s_args:
     - server
-    - "--token 8qac9e2qtnt6kc2aR49D"
-    - "--server https://k3os01.shuttleworth.tech:6443"
+    - "--token"
+    - "8qac9e2qtnt6kc2aR49D"
+    - "--server"
+    - "https://k3os01.shuttleworth.tech:6443"
     - "--no-deploy=traefik"
