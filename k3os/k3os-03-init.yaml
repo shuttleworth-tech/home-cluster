@@ -1,0 +1,31 @@
+ssh_authorized_keys:
+  - github:Aurelian-Shuttleworth
+write_files:
+  - encoding: ""
+    content: |-
+      #!/bin/bash
+      echo hello, local service start
+    owner: root
+    path: /etc/local.d/example.start
+    permissions: '0755'
+hostname: k3os-03
+run_cmd:
+  - "echo hello, run command"
+boot_cmd:
+  - "echo hi from boot time && echo bye from boot time"
+init_cmd:
+  - "echo hi on init && echo bye on init"
+k3os:
+  server_url: "https://k3os01.shuttleworth.tech:6443"
+  token: 8qac9e2qtnt6kc2aR49D
+  dns_nameservers:
+    - 10.0.140.1
+    - 8.8.8.8
+    - 1.1.1.1
+  ntp_servers:
+    - 0.us.pool.ntp.org
+    - 1.us.pool.ntp.org
+  k3s_args:
+    - server
+    - "--server https://k3os01.shuttleworth.tech:6443
+    - "--no-deploy=traefik"
