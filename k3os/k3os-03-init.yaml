@@ -27,5 +27,4 @@ k3os:
     - 1.us.pool.ntp.org
   k3s_args:
     - server
-    - "--server https://k3os01.shuttleworth.tech:6443"
     - "--no-deploy=traefik"
