@@ -1,5 +1,6 @@
 ssh_authorized_keys:
   - github:Aurelian-Shuttleworth
+hostname: k3os-01
 k3os:
   token: 8qac9e2qtnt6kc2aR49D
   dns_nameservers:
