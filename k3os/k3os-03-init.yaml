@@ -16,8 +16,6 @@ boot_cmd:
 init_cmd:
   - "echo hi on init && echo bye on init"
 k3os:
-  server_url: "https://k3os01.shuttleworth.tech:6443"
-  token: 8qac9e2qtnt6kc2aR49D
   dns_nameservers:
     - 10.0.140.1
     - 8.8.8.8
@@ -27,4 +25,6 @@ k3os:
     - 1.us.pool.ntp.org
   k3s_args:
     - server
+    - "--token 8qac9e2qtnt6kc2aR49D"
+    - "--server https://k3os01.shuttleworth.tech:6443"
     - "--no-deploy=traefik"
